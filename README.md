@@ -85,3 +85,63 @@ Recall
 F1 Score
 
 ROC AUC Curve (Visualized for all models)
+
+---
+
+### Model Performance Summary
+
+Best Model Based on F1 Score:
+
+```
+Model: Logistic Regression
+Accuracy: 0.7605
+Precision: 0.5394
+Recall: 0.8101
+F1 Score: 0.6476
+```
+
+Why? Logistic Regression achieved the highest recall, making it ideal when the priority is to catch as many churners as possible. It minimizes false negatives, which is essential for proactive customer retention.
+
+
+Final Selected Model (Balanced Performance):
+
+```
+Model: Neural Network
+Accuracy: 0.7989
+Precision: 0.6207
+Recall: 0.6672
+F1 Score: 0.6432
+```
+
+Why? The Neural Network offers a more balanced performance across all metrics, making it the most robust and generalizable model for real-world deployment, where both precision and recall matter.
+
+----
+
+### Conclusion
+
+Logistic Regression is best when recall is the top priority — i.e., identifying churners at all costs.
+
+Neural Network is best overall when considering trade-offs between all performance metrics.
+
+Business decisions will drive final model deployment based on whether catching all churners (recall) or avoiding false alarms (precision) is more important.
+
+### Next Steps
+
+Hyperparameter tuning (e.g., GridSearchCV for tree-based models, dropout/batch size optimization for NN).
+
+Add SHAP/feature importance visualizations.
+
+Integrate into a dashboard or prediction API.
+
+Continuous model retraining with real-time data.
+
+---
+
+### Technologies Used
+
+Python (pandas, numpy, scikit-learn, imbalanced-learn, seaborn, matplotlib)
+
+TensorFlow / Keras (Neural Network)
+
+Google Colab
+

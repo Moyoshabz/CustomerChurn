@@ -2,9 +2,9 @@
 This project analyzes customer churn data from a telecommunications company to identify patterns and predict churn using machine learning models. The primary goal is to understand key factors contributing to customer churn and build a predictive model that helps the business retain valuable customers.
 
 ## Dataset
-Source: Kaggle - Telco Customer Churn
+- Source: Kaggle - Telco Customer Churn
 
-https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+  https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 The dataset contains customer demographic information, account details, service usage patterns, and churn labels.
 
@@ -19,72 +19,73 @@ Loaded the Telco Customer Churn dataset from Kaggle.
 
 #### 2. Data Preprocessing
 
-Checked for Null & NaN values.
+- Checked for Null & NaN values.
 
-Removed customerID column – not useful for modeling.
+- Removed customerID column – not useful for modeling.
 
-Converted TotalCharges column from object to float.
+- Converted TotalCharges column from object to float.
 
-Identified and handled any rows with conversion issues (e.g., blank spaces).
+- Identified and handled any rows with conversion issues (e.g., blank spaces).
 
 ---
 
 #### 3. Exploratory Data Analysis (EDA)
 
-Visualized feature distributions and correlations with the churn label.
+- Visualized feature distributions and correlations with the churn label.
 
-Analyzed how tenure and monthly charges relate to churn behavior.
+- Analyzed how tenure and monthly charges relate to churn behavior.
 
-Plotted churn rate across various service features and demographic groups.
+- Plotted churn rate across various service features and demographic groups.
 
 ---
 
 #### 4. Feature Engineering
 
-Encoded binary columns using Label Encoding (e.g., Yes/No → 1/0).
+- Encoded binary columns using Label Encoding (e.g., Yes/No → 1/0).
 
-Encoded multi-category columns using One-Hot Encoding.
+- Encoded multi-category columns using One-Hot Encoding.
 
-Normalized numeric values as needed for certain models (especially neural network).
+- Normalized numeric values as needed for certain models (especially neural network).
 
 ---
 
 #### 5. Handling Class Imbalance
 
-Analyzed churn distribution — identified significant class imbalance.
+- Analyzed churn distribution — identified significant class imbalance.
 
-Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance classes for some models.
+- Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance classes for some models.
 
 ---
 
 #### 6. Model Building
 
-Train-test split: 70% training, 30% testing.
+- Train-test split: 70% training, 30% testing.
 
 Built the following models:
 
-Logistic Regression with class weight balancing
+- Logistic Regression with class weight balancing
 
-Decision Tree with class weight balancing
+- Decision Tree with class weight balancing
 
-Random Forest with SMOTE oversampling
+- Random Forest with SMOTE oversampling
 
-Neural Network (Sequential model using Keras)
+- Neural Network (Sequential model using Keras)
 
 ---
 
 #### 7. Model Evaluation
+
 Evaluated models using:
 
-Accuracy
+- Accuracy
 
-Precision
+- Precision
 
-Recall
+- Recall
 
-F1 Score
+- F1 Score
 
-ROC AUC Curve (Visualized for all models)
+- ROC AUC Curve (Visualized for all models)
 
 ---
 
@@ -119,29 +120,29 @@ Why? The Neural Network offers a more balanced performance across all metrics, m
 
 ### Conclusion
 
-Logistic Regression is best when recall is the top priority — i.e., identifying churners at all costs.
+- Logistic Regression is best when recall is the top priority — i.e., identifying churners at all costs.
 
-Neural Network is best overall when considering trade-offs between all performance metrics.
+- Neural Network is best overall when considering trade-offs between all performance metrics.
 
-Business decisions will drive final model deployment based on whether catching all churners (recall) or avoiding false alarms (precision) is more important.
+- Business decisions will drive final model deployment based on whether catching all churners (recall) or avoiding false alarms (precision) is more important.
 
 ### Next Steps
 
-Hyperparameter tuning (e.g., GridSearchCV for tree-based models, dropout/batch size optimization for NN).
+- Hyperparameter tuning (e.g., GridSearchCV for tree-based models, dropout/batch size optimization for NN).
 
-Add SHAP/feature importance visualizations.
+- Add SHAP/feature importance visualizations.
 
-Integrate into a dashboard or prediction API.
+- Integrate into a dashboard or prediction API.
 
-Continuous model retraining with real-time data.
+- Continuous model retraining with real-time data.
 
 ---
 
 ### Technologies Used
 
-Python (pandas, numpy, scikit-learn, imbalanced-learn, seaborn, matplotlib)
+- Python (pandas, numpy, scikit-learn, imbalanced-learn, seaborn, matplotlib)
 
-TensorFlow / Keras (Neural Network)
+- TensorFlow / Keras (Neural Network)
 
-Google Colab
+- Google Colab
 

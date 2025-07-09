@@ -21,7 +21,7 @@ Loaded the Telco Customer Churn dataset from Kaggle.
 
 - Checked for Null & NaN values.
 
-- Removed customerID column – not useful for modeling.
+- Removed customerID column - not useful for modeling.
 
 - Converted TotalCharges column from object to float.
 
@@ -41,7 +41,7 @@ Loaded the Telco Customer Churn dataset from Kaggle.
 
 #### 4. Feature Engineering
 
-- Encoded binary columns using Label Encoding (e.g., Yes/No → 1/0).
+- Encoded binary columns using Label Encoding (Yes/No -> 1/0).
 
 - Encoded multi-category columns using One-Hot Encoding.
 
@@ -51,7 +51,7 @@ Loaded the Telco Customer Churn dataset from Kaggle.
 
 #### 5. Handling Class Imbalance
 
-- Analyzed churn distribution — identified significant class imbalance.
+- Analyzed churn distribution - identified significant class imbalance.
 
 - Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance classes for some models.
 
@@ -120,7 +120,7 @@ Why? The Neural Network offers a more balanced performance across all metrics, m
 
 ### Conclusion
 
-- Logistic Regression is best when recall is the top priority — i.e., identifying churners at all costs.
+- Logistic Regression is best when recall is the top priority - for example, identifying churners at all costs.
 
 - Neural Network is best overall when considering trade-offs between all performance metrics.
 
